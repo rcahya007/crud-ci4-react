@@ -6,10 +6,17 @@ import ChartTwo from '../../components/Charts/ChartTwo';
 import ChatCard from '../../components/Chat/ChatCard';
 import MapOne from '../../components/Maps/MapOne';
 import TableOne from '../../components/Tables/TableOne';
+import { HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 
-const ECommerce: React.FC = () => {
+const ECommerce = () => {
   return (
     <>
+      <HelmetProvider>
+        <Helmet>
+          <title>Dashboard | CI4 React TailwindCss</title>
+        </Helmet>
+      </HelmetProvider>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7.5">
         <CardDataStats title="Total views" total="$3.456K" rate="0.43%" levelUp>
           <svg
